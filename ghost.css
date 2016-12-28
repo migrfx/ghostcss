@@ -1,0 +1,346 @@
+/* ===============================================================
+========== simplest framework ever (ghost.css) by MI Grfx ========
+=============================================================== */
+/* =======================================================
+This base group of styles is pretty much all =============
+about layout. Feel free to change anything you wish ======
+at your own convenience and enjoy ========================
+======================================================= */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body img {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+  height: auto !important;
+}
+
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #05ddb6;
+  transition: all 0.35s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0bb8d2;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  margin-bottom: 10px;
+}
+
+.icon-box {
+  text-align: center;
+}
+
+.main-header {
+  width: 100%;
+  background: #333;
+  color: #ededed;
+  text-align: center;
+  padding: 30px;
+}
+
+.test-box {
+  width: 100%;
+  background: #d9d9d9;
+  min-height: 20px;
+  padding: 5px;
+}
+
+.main-footer {
+  width: 100%;
+  background: #333;
+  color: #ededed;
+  text-align: center;
+  padding: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+}
+
+
+/* ===========================================================
+========== very simple responsive grid with gutters ==========
+=========================================================== */
+.wrapper, .wrapper:before, .wrapper:after {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.wrapper-full-page, .wrapper-full-page:before, .wrapper-full-age:after {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  padding: 8px;
+}
+
+@media only screen and (min-width: 480px) {
+  .col-md-1 {
+    width: 8.33333%;
+  }
+
+  .col-md-2 {
+    width: 16.66667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33333%;
+  }
+
+  .col-md-5 {
+    width: 41.66667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33333%;
+  }
+
+  .col-md-11 {
+    width: 91.66667%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33333%;
+  }
+
+  .col-2 {
+    width: 16.66667%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33333%;
+  }
+
+  .col-5 {
+    width: 41.66667%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33333%;
+  }
+
+  .col-8 {
+    width: 66.66667%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33333%;
+  }
+
+  .col-11 {
+    width: 91.66667%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+/* =============================================================
+========== responsive top navigation bar with toggle ===========
+=== needs jquery and the included custom.js file to function ===
+============================================================= */
+nav {
+  overflow: hidden;
+  border-bottom: 1px solid #222;
+}
+
+.nav-header {
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+
+.brand-logo {
+  font-size: 18px;
+}
+
+.handle {
+  float: right;
+  border: none;
+  margin-right: 5px;
+  font-size: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: none;
+  background: #099acd;
+}
+
+nav a {
+  text-decoration: none;
+  color: #05ddb6;
+}
+
+nav ul {
+  overflow: hidden;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: max-height 0.5s;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  color: #0bb8d2;
+}
+
+nav ul li:hover {
+  background-color: #222;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-header {
+    float: none;
+  }
+
+  nav ul {
+    background: #111;
+    max-height: 0;
+    width: 100%;
+  }
+
+  nav ul.show {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .handle {
+    display: inline;
+  }
+}
+/* ==============================================================
+========== set of css buttons with format and 6 colors ==========
+============================================================== */
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.btn-base {
+  color: #000;
+  background-color: #d9d9d9;
+  border-color: #cccccc;
+}
+
+.btn-base:hover, .btn-base:focus, .btn-base:active {
+  color: #000;
+  background-color: silver;
+  border-color: #b3b3b3;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #333;
+  border-color: #262626;
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+  color: #fff;
+  background-color: #1a1a1a;
+  border-color: #0d0d0d;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0075bf;
+  border-color: #0065a6;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  background-color: #00568c;
+  border-color: #004673;
+}
+
+/*# sourceMappingURL=mi-framework.css.map */
